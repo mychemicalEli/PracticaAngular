@@ -21,6 +21,7 @@ import { JeansComponent } from './categories/jeans/jeans.component';
 import { TShirtsComponent } from './categories/t-shirts/t-shirts.component';
 import { CarouselComponent } from './home/carousel/carousel.component';
 import { BannersComponent } from './home/banners/banners.component';
+import { CategoriesCardsComponent } from './home/categories-cards/categories-cards.component';
 
 registerLocaleData(localeEs, 'es');
 
@@ -40,7 +41,8 @@ registerLocaleData(localeEs, 'es');
     JeansComponent,
     TShirtsComponent,
     CarouselComponent,
-    BannersComponent
+    BannersComponent,
+    CategoriesCardsComponent
   ],
   imports: [
     BrowserModule,
