@@ -22,6 +22,9 @@ import { JeansComponent } from './jeans/jeans.component';
   imports: [
     CommonModule,
     CategoriesRoutingModule
+  ],
+  exports:[
+    BagsComponent 
   ]
 })
 export class CategoriesModule { }
