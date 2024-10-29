@@ -14,4 +14,10 @@ export class ItemService {
     const urlEndPoint: string = "http://localhost:3005/items";
     return this.http.get<ItemInterface[]>(urlEndPoint);
   }
+
+  public getItemById(id: number): Observable<ItemInterface> {
+    const urlEndPoint: string = `http://localhost:3005/items/${id}`;
+    return this.http.get<ItemInterface>(urlEndPoint);
+  }
+  
 }
