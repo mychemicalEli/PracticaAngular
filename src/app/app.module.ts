@@ -1,4 +1,4 @@
-import { NgModule } from '@angular/core';
+import { NgModule} from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
@@ -11,10 +11,14 @@ import { NavbarComponent } from './layout/navbar/navbar.component';
 import { FooterComponent } from './layout/footer/footer.component';
 import { AboutComponent } from './about/about.component';
 import { HttpClientModule, provideHttpClient, withFetch } from '@angular/common/http';
-import { CategoriesModule } from './categories/categories.module';
 import { CommonModule } from '@angular/common';
 import { registerLocaleData } from '@angular/common';
 import localeEs from '@angular/common/locales/es';
+import { BagsComponent } from './categories/bags/bags.component';
+import { DressesComponent } from './categories/dresses/dresses.component';
+import { ShoesComponent } from './categories/shoes/shoes.component';
+import { JeansComponent } from './categories/jeans/jeans.component';
+import { TShirtsComponent } from './categories/t-shirts/t-shirts.component';
 
 registerLocaleData(localeEs, 'es');
 
@@ -27,13 +31,17 @@ registerLocaleData(localeEs, 'es');
     ItemFormComponent,
     NavbarComponent,
     FooterComponent,
-    AboutComponent
+    AboutComponent,
+    BagsComponent,
+    DressesComponent,
+    ShoesComponent,
+    JeansComponent,
+    TShirtsComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
-    CategoriesModule,
     CommonModule
   ],
   providers: [
