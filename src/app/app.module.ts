@@ -11,6 +11,12 @@ import { NavbarComponent } from './layout/navbar/navbar.component';
 import { FooterComponent } from './layout/footer/footer.component';
 import { AboutComponent } from './about/about.component';
 import { HttpClientModule, provideHttpClient, withFetch } from '@angular/common/http';
+import { CategoriesModule } from './categories/categories.module';
+import { CommonModule } from '@angular/common';
+import { registerLocaleData } from '@angular/common';
+import localeEs from '@angular/common/locales/es';
+
+registerLocaleData(localeEs, 'es');
 
 @NgModule({
   declarations: [
@@ -26,10 +32,12 @@ import { HttpClientModule, provideHttpClient, withFetch } from '@angular/common/
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    CategoriesModule,
+    CommonModule
   ],
   providers: [
-    provideHttpClient(withFetch())
+    provideHttpClient(withFetch()),
   ],
   bootstrap: [AppComponent]
 })

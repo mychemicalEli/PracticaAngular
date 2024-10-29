@@ -12,6 +12,6 @@ export class ItemFormComponent {
   constructor(private route: ActivatedRoute ){}
 
   ngOnInit():void{
-  this.idItem= this.route.snapshot.paramMap.get('idArticulo') ?? undefined;
+  this.idItem= this.route.snapshot.paramMap.get('idItem') ?? undefined;
 }
 }

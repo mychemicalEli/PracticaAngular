@@ -1,9 +1,16 @@
 <div class="card" style="width: 18rem;" *ngIf="item">
-    <img [src]="item.image" class="card-img-top" alt="imagen de {{item.name}}">
-    <div class="card-body">
-      <h5 class="card-title">{{item.name}}</h5>
-      <p class="card-text">{{item.price}}</p>
-      <a class="btn btn-primary" (click)="navigateTo()">{{buttonText}}</a>
-    </div>
+  <img [src]="item.image" class="card-img-top" alt="imagen de {{item.name}}" (click)="navigateTo()">
+  <div class="card-body">
+    <div *ngIf="item.isOnSale" class="sale-badge">SALE</div>
+    <h5 class="card-title">{{item.name}}</h5>
+    <p class="card-text">
+      <span [ngClass]="{'old-price': item.isOnSale}">
+        {{ item.price | currency: 'EUR' }}
+      </span>
+      <span *ngIf="item.isOnSale" class="sale-price">
+        {{ item.salePrice | currency: 'EUR' }}
+      </span>
+    </p>
+    <i class="fa-heart heart-icon" [ngClass]="{'fa-solid isLiked': item.isLiked, 'fa-regular': !item.isLiked}"></i>
   </div>
-  
+</div>

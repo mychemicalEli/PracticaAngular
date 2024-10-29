@@ -8,11 +8,9 @@ import { ItemInterface } from '../models/ItemInterface.model';
 })
 export class ItemCardComponent {
   @Input() item?: ItemInterface;
-  @Input() buttonText: string = "Pulsar";
   @Output() click: EventEmitter<number> = new EventEmitter<number>();
 
   ngOnInit(): void {
-  
   }
 
   public navigateTo(): void {
