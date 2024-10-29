@@ -1,0 +1,8 @@
+<div class="container-fluid">
+<div class="card text-bg-dark" *ngFor="let item of items">
+    <img [src]="item.image" class="card-img" alt="image {{item.title}}">
+    <div class="card-img-overlay">
+      <h5 class="card-title">{{item.title}}</h5>
+    </div>
+  </div>
+</div>
