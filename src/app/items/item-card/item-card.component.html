@@ -1,1 +1,9 @@
-<p>item-card works!</p>
+<div class="card" style="width: 18rem;" *ngIf="item">
+    <img [src]="item.image" class="card-img-top" alt="imagen de {{item.name}}">
+    <div class="card-body">
+      <h5 class="card-title">{{item.name}}</h5>
+      <p class="card-text">{{item.price}}</p>
+      <a class="btn btn-primary" (click)="navigateTo()">{{buttonText}}</a>
+    </div>
+  </div>
+  
