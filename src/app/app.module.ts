@@ -20,6 +20,7 @@ import { ShoesComponent } from './categories/shoes/shoes.component';
 import { JeansComponent } from './categories/jeans/jeans.component';
 import { TShirtsComponent } from './categories/t-shirts/t-shirts.component';
 import { CarouselComponent } from './home/carousel/carousel.component';
+import { BannersComponent } from './home/banners/banners.component';
 
 registerLocaleData(localeEs, 'es');
 
@@ -38,7 +39,8 @@ registerLocaleData(localeEs, 'es');
     ShoesComponent,
     JeansComponent,
     TShirtsComponent,
-    CarouselComponent
+    CarouselComponent,
+    BannersComponent
   ],
   imports: [
     BrowserModule,
