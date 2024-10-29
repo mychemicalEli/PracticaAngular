@@ -1,1 +1,29 @@
-<p>Este es el articulo {{idItem}}</p>
+<div class="item-detail-container">
+    <div class="item-image">
+        <img [src]="item?.image" alt="{{ item?.name }}" class="large-image">
+    </div>
+    <div class="item-info">
+        <h2>{{ item?.name }}</h2>
+        <div *ngIf="item?.isOnSale" class="sale-badge">SALE</div>
+        <p class="price">
+            <span [ngClass]="{'old-price': item?.isOnSale}">
+                {{ item?.price | currency: 'EUR' }}
+            </span>
+            <span *ngIf="item?.isOnSale" class="sale-price">
+                {{ item?.salePrice | currency: 'EUR' }}
+            </span>
+        </p>
+        <p class="color">Color:</p>
+        <div class="small-image-container">
+            <img [src]="item?.image" alt="{{ item?.name }}" class="small-image">
+        </div>
+        <div class="button-container">
+            <button class="wait-list-button">
+                <i class="fa-regular fa-envelope"></i> Wait List
+            </button>
+            <button class="wishlist-button">
+                <i class="fa-regular fa-heart"></i> Wish List
+            </button>
+        </div>
+    </div>
+</div>
