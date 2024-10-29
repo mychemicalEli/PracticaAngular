@@ -1,0 +1,29 @@
+h2 {
+    margin-top: 20px;
+    color: #555;
+}
+
+p {
+    line-height: 1.6;
+}
+
+#title {
+    color: whitesmoke;
+    display: flex;
+    justify-content: center;
+    padding: 30px;
+    letter-spacing: 10px;
+    font-weight: 100;
+    margin-bottom: 40px;
+}
+
+.img-fluid {
+    height: 100vh;
+    width: auto;
+    margin: 40px;
+}
+
+.content-container {
+    padding: 30px;
+    padding-right: 50px;
+}
