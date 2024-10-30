@@ -25,6 +25,7 @@ export class CategoriesCardsComponent {
       }
     );
   }
+  
   getCategoryRoute(categoryName: string): string {
     return categoryName;
   }
