@@ -29,6 +29,6 @@ export class ItemListComponent {
   }
 
   public navigateTo(idItem: number): void {
-    this.router.navigate(['item-list', idItem]);
+    this.router.navigate(['item', idItem]);
   }
 }

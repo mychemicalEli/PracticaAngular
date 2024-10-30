@@ -12,7 +12,7 @@ import { ShoesComponent } from './categories/shoes/shoes.component';
 const routes: Routes = [
   { path: '', component: HomeComponent },
   { path: 'about', component: AboutComponent },
-  { path: 'item-list/:idItem', component: ItemFormComponent },
+  { path: 'item/:idItem', component: ItemFormComponent },
   { path: 'bags', component: BagsComponent },
   { path: 'dresses', component: DressesComponent },
   { path: 'jeans', component: JeansComponent },

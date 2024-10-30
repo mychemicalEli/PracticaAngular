@@ -12,11 +12,15 @@ export class ItemFormComponent {
   item?: ItemInterface;
 
   constructor(
-    private route: ActivatedRoute, 
-    private service: ItemService 
-  ){}
+    private route: ActivatedRoute,
+    private service: ItemService
+  ) { }
 
   ngOnInit(): void {
+    this.getItemById();
+  }
+  
+  public getItemById() {
     const idItem = Number(this.route.snapshot.paramMap.get('idItem'));
     this.service.getItemById(idItem).subscribe((data: ItemInterface) => {
       this.item = data;
