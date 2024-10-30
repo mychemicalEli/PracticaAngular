@@ -1,0 +1,199 @@
+{
+    "openapi": "3.0.0",
+    "info": {
+        "title": "PracticaAngular",
+        "version": "1.0.0"
+    },
+    "servers": [
+        {
+            "url": "http://localhost:3005/"
+        }
+    ],
+    "paths": {
+        "/items": {
+            "get": {
+                "description": "",
+                "responses": {
+                    "200": {
+                        "description": "",
+                        "content": {
+                            "application/json": {
+                                "example": "[\n  {\n    \"id\": 1,\n    \"name\": \"Converse\",\n    \"price\": 98,\n    \"salePrice\": 56,\n    \"isOnSale\": true,\n    \"image\": \"https://images.unsplash.com/photo-1463100099107-aa0980c362e6?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D\",\n    \"isLiked\": false\n  },\n  {\n    \"id\": 2,\n    \"name\": \"Nike Air Max\",\n    \"price\": 120,\n    \"salePrice\": 90,\n    \"isOnSale\": true,\n    \"image\": \"https://images.unsplash.com/photo-1660633777105-9521b3757393?q=80&w=1446&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D\",\n    \"isLiked\": true\n  },\n  {\n    \"id\": 3,\n    \"name\": \"Adidas Originals\",\n    \"price\": 110,\n    \"salePrice\": 85,\n    \"isOnSale\": true,\n    \"image\": \"https://images.unsplash.com/photo-1724934732583-22704a86c00d?q=80&w=1570&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D\",\n    \"isLiked\": false\n  },\n  {\n    \"id\": 4,\n    \"name\": \"Zara Dress\",\n    \"price\": 80,\n    \"salePrice\": 60,\n    \"isOnSale\": true,\n    \"image\": \"https://images.unsplash.com/photo-1660036174586-6bfbf900269b?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8N3x8emFyYSUyMGRyZXNzfGVufDB8fDB8fHwy\",\n    \"isLiked\": true\n  },\n  {\n    \"id\": 5,\n    \"name\": \"H&M Handbag\",\n    \"price\": 65,\n    \"salePrice\": 50,\n    \"isOnSale\": false,\n    \"image\": \"https://images.unsplash.com/photo-1702325107940-88f9cd4468c2?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OHx8aGFuZGJhZ3xlbnwwfHwwfHx8Mg%3D%3D\",\n    \"isLiked\": false\n  },\n  {\n    \"id\": 6,\n    \"name\": \"Puma Sneakers\",\n    \"price\": 95,\n    \"salePrice\": 75,\n    \"isOnSale\": false,\n    \"image\": \"https://images.unsplash.com/photo-1604868189265-219ba7bf7ea3?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTh8fHB1bWElMjBzbmVha2Vyc3xlbnwwfHwwfHx8Mg%3D%3D\",\n    \"isLiked\": true\n  },\n  {\n    \"id\": 7,\n    \"name\": \"Levi's Jeans\",\n    \"price\": 85,\n    \"salePrice\": 70,\n    \"isOnSale\": false,\n    \"image\": \"https://images.unsplash.com/photo-1547227795-33be3f89c971?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTh8fGxldmkncyUyMGplYW5zfGVufDB8fDB8fHwy\",\n    \"isLiked\": false\n  },\n  {\n    \"id\": 8,\n    \"name\": \"Mango Blouse\",\n    \"price\": 60,\n    \"salePrice\": 40,\n    \"isOnSale\": true,\n    \"image\": \"https://images.unsplash.com/photo-1564257631407-4deb1f99d992?q=80&w=1548&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D\",\n    \"isLiked\": true\n  },\n  {\n    \"id\": 9,\n    \"name\": \"Uniqlo Jacket\",\n    \"price\": 100,\n    \"salePrice\": 80,\n    \"isOnSale\": true,\n    \"image\": \"https://images.unsplash.com/photo-1521223890158-f9f7c3d5d504?q=80&w=1492&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D\",\n    \"isLiked\": false\n  },\n  {\n    \"id\": 10,\n    \"name\": \"Forever 21 Skirt\",\n    \"price\": 45,\n    \"salePrice\": 30,\n    \"isOnSale\": true,\n    \"image\": \"https://images.unsplash.com/photo-1509182469511-7f0b50bfa63e?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D\",\n    \"isLiked\": true\n  },\n  {\n    \"id\": 11,\n    \"name\": \"ASOS Suit\",\n    \"price\": 150,\n    \"salePrice\": 120,\n    \"isOnSale\": false,\n    \"image\": \"https://images.unsplash.com/photo-1516715533016-ae6f6fd1a5af?q=80&w=1587&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D\",\n    \"isLiked\": false\n  },\n  {\n    \"id\": 12,\n    \"name\": \"Gucci Belt\",\n    \"price\": 300,\n    \"salePrice\": 250,\n    \"isOnSale\": false,\n    \"image\": \"https://images.unsplash.com/photo-1608461864721-b8f50c91c147?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8N3x8Z3VjY2klMjBiZWx0fGVufDB8fDB8fHwy\",\n    \"isLiked\": true\n  }\n]\n"
+                            }
+                        },
+                        "headers": {
+                            "Access-Control-Allow-Origin": {
+                                "schema": {
+                                    "type": "string"
+                                },
+                                "example": "*"
+                            },
+                            "Access-Control-Allow-Methods": {
+                                "schema": {
+                                    "type": "string"
+                                },
+                                "example": "GET,POST,PUT,PATCH,DELETE,HEAD,OPTIONS"
+                            },
+                            "Access-Control-Allow-Headers": {
+                                "schema": {
+                                    "type": "string"
+                                },
+                                "example": "Content-Type, Origin, Accept, Authorization, Content-Length, X-Requested-With"
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/carousel": {
+            "get": {
+                "description": "",
+                "responses": {
+                    "200": {
+                        "description": "",
+                        "content": {
+                            "application/json": {
+                                "example": "{\n  \"image1\": \"https://images.unsplash.com/photo-1633483408137-87f2b1de542f?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D\",\n  \"image2\": \"https://images.unsplash.com/photo-1505801066737-f25b349904b5?q=80&w=1473&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D\",\n  \"image3\":\"https://images.unsplash.com/photo-1494228766058-1430438d10fc?q=80&w=1473&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D\"\n}"
+                            }
+                        },
+                        "headers": {
+                            "Access-Control-Allow-Origin": {
+                                "schema": {
+                                    "type": "string"
+                                },
+                                "example": "*"
+                            },
+                            "Access-Control-Allow-Methods": {
+                                "schema": {
+                                    "type": "string"
+                                },
+                                "example": "GET,POST,PUT,PATCH,DELETE,HEAD,OPTIONS"
+                            },
+                            "Access-Control-Allow-Headers": {
+                                "schema": {
+                                    "type": "string"
+                                },
+                                "example": "Content-Type, Origin, Accept, Authorization, Content-Length, X-Requested-With"
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/banners": {
+            "get": {
+                "description": "",
+                "responses": {
+                    "200": {
+                        "description": "",
+                        "content": {
+                            "application/json": {
+                                "example": "[\n  {\n  \"title\": \"Latest arrivals\",\n  \"image\": \"https://images.unsplash.com/photo-1700853010051-dce31802dafc?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D\"\n},\n{\n  \"title\": \"Summer fashion\",\n  \"image\": \"https://images.unsplash.com/photo-1523380677598-64d85d015339?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D\"\n},\n{\n  \"title\": \"Be chic\",\n  \"image\": \"https://images.unsplash.com/photo-1509695507497-903c140c43b0?q=80&w=1473&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D\"\n}\n]"
+                            }
+                        },
+                        "headers": {
+                            "Access-Control-Allow-Origin": {
+                                "schema": {
+                                    "type": "string"
+                                },
+                                "example": "*"
+                            },
+                            "Access-Control-Allow-Methods": {
+                                "schema": {
+                                    "type": "string"
+                                },
+                                "example": "GET,POST,PUT,PATCH,DELETE,HEAD,OPTIONS"
+                            },
+                            "Access-Control-Allow-Headers": {
+                                "schema": {
+                                    "type": "string"
+                                },
+                                "example": "Content-Type, Origin, Accept, Authorization, Content-Length, X-Requested-With"
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/categories": {
+            "get": {
+                "description": "",
+                "responses": {
+                    "200": {
+                        "description": "",
+                        "content": {
+                            "application/json": {
+                                "example": "[\n  {\n  \"id\": 1,\n  \"name\": \"bags\",\n  \"image\": \"https://images.unsplash.com/photo-1683921590274-a83862cb11c3?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MjV8fGhhbmRiYWd8ZW58MHx8MHx8fDI%3D\"\n},\n{\n  \"id\": 2,\n  \"name\": \"dresses\",\n  \"image\": \"https://images.unsplash.com/photo-1502716119720-b23a93e5fe1b?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D\"\n},\n{\n  \"id\": 3,\n  \"name\": \"jeans\",\n  \"image\": \"https://images.unsplash.com/photo-1604176354204-9268737828e4?q=80&w=1480&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D\"\n},\n{\n  \"id\": 4,\n  \"name\": \"t-shirts\",\n  \"image\": \"https://images.unsplash.com/photo-1499713907394-43c9d094ac2e?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTl8fHRzaGlydHxlbnwwfHwwfHx8Mg%3D%3D\"\n},\n{\n  \"id\": 5,\n  \"name\": \"shoes\",\n  \"image\": \"https://images.unsplash.com/photo-1599670998937-441a3a74b2f1?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8c25lYWtlcnN8ZW58MHx8MHx8fDI%3D\"\n}\n]"
+                            }
+                        },
+                        "headers": {
+                            "Access-Control-Allow-Origin": {
+                                "schema": {
+                                    "type": "string"
+                                },
+                                "example": "*"
+                            },
+                            "Access-Control-Allow-Methods": {
+                                "schema": {
+                                    "type": "string"
+                                },
+                                "example": "GET,POST,PUT,PATCH,DELETE,HEAD,OPTIONS"
+                            },
+                            "Access-Control-Allow-Headers": {
+                                "schema": {
+                                    "type": "string"
+                                },
+                                "example": "Content-Type, Origin, Accept, Authorization, Content-Length, X-Requested-With"
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/items/{id}": {
+            "get": {
+                "description": "",
+                "responses": {
+                    "200": {
+                        "description": "",
+                        "content": {
+                            "application/json": {
+                                "example": "{\n  \"id\": 1,\n  \"name\": \"Converse\",\n  \"price\": 98,\n  \"salePrice\": 56,\n  \"isOnSale\": true,\n  \"image\": \"https://images.unsplash.com/photo-1463100099107-aa0980c362e6?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D\",\n  \"isLiked\": true\n}"
+                            }
+                        },
+                        "headers": {
+                            "Access-Control-Allow-Origin": {
+                                "schema": {
+                                    "type": "string"
+                                },
+                                "example": "*"
+                            },
+                            "Access-Control-Allow-Methods": {
+                                "schema": {
+                                    "type": "string"
+                                },
+                                "example": "GET,POST,PUT,PATCH,DELETE,HEAD,OPTIONS"
+                            },
+                            "Access-Control-Allow-Headers": {
+                                "schema": {
+                                    "type": "string"
+                                },
+                                "example": "Content-Type, Origin, Accept, Authorization, Content-Length, X-Requested-With"
+                            }
+                        }
+                    }
+                },
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "schema": {
+                            "type": "string"
+                        },
+                        "required": true
+                    }
+                ]
+            }
+        }
+    }
+}
