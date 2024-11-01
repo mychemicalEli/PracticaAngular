@@ -1,4 +1,6 @@
+<div class="container-fluid bg-dark" id="title" *ngIf="categoryName">
+  <h1>{{categoryName}}</h1>
+</div>
 <div class="container">
-  <app-item-card *ngFor="let item of items" [item]="item"
-    (click)="navigateTo($event)"></app-item-card>
+  <app-item-card *ngFor="let item of items" [item]="item" (click)="navigateTo($event)"></app-item-card>
 </div>

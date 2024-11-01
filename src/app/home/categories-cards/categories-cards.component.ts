@@ -1,6 +1,7 @@
-import { Component } from '@angular/core';
-import { Category } from '../../categories/models/category.model';
-import { CategoryService } from '../../categories/services/category.service';
+import { Component, EventEmitter, Output } from '@angular/core';
+import { Category } from '../../items/models/CategoryInterface.model';
+import { ItemService } from '../../items/services/item.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-categories-cards',
@@ -8,25 +9,26 @@ import { CategoryService } from '../../categories/services/category.service';
   styleUrl: './categories-cards.component.scss'
 })
 export class CategoriesCardsComponent {
-  items: Category[] = [];
+  categories: Category[] = [];
 
   constructor(
-    private service: CategoryService
+    private service: ItemService,
   ) { }
 
   ngOnInit(): void {
-    this.getItems();
+    this.getCategories();
   }
 
-  private getItems() {
-    this.service.getCategoryItems().subscribe(
+  private getCategories() {
+    this.service.getCategories().subscribe(
       (data: Category[]) => {
-        this.items = data;
+        this.categories = data;
       }
     );
   }
-  
-  getCategoryRoute(categoryName: string): string {
-    return categoryName;
+
+  public formatCategoryName(name: string): string {
+    return name.toLowerCase().replace(/ /g, '-');
   }
+
 }
