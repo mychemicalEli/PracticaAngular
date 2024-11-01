@@ -3,7 +3,8 @@
         <a class="navbar-brand mx-auto px-5">
             <img src="/assets/logo.png" alt="Logo" width="30" height="24" class="d-inline-block align-text-center">
         </a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown"
+            aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarNavDropdown">
@@ -14,16 +15,16 @@
                 <li class="nav-item" [routerLinkActive]="['active']" [routerLinkActiveOptions]="{exact:true}">
                     <a class="nav-link px-3" [routerLink]="['about']">About us</a>
                 </li>
-                <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle px-3" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                <li class="nav-item dropdown" *ngIf="categories.length">
+                    <a class="nav-link dropdown-toggle px-3" role="button" data-bs-toggle="dropdown"
+                        aria-expanded="false">
                         Categories
                     </a>
                     <ul class="dropdown-menu">
-                        <li><a class="dropdown-item" [routerLink]="['bags']">Bags</a></li>
-                        <li><a class="dropdown-item" [routerLink]="['dresses']">Dresses</a></li>
-                        <li><a class="dropdown-item" [routerLink]="['shoes']">Shoes</a></li>
-                        <li><a class="dropdown-item" [routerLink]="['jeans']">Jeans</a></li>
-                        <li><a class="dropdown-item" [routerLink]="['t-shirts']">T-shirts</a></li>
+                        <li *ngFor="let category of categories">
+                            <a class="dropdown-item" [routerLink]="['/categories', category.name]">{{category.name |
+                                titlecase}}</a>
+                        </li>
                     </ul>
                 </li>
             </ul>

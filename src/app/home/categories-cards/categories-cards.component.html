@@ -1,10 +1,10 @@
-<div class="container" *ngIf="items">
+<div class="container" *ngIf="categories">
   <h2 class="text-center">Shop by Category</h2>
   <div class="card-container d-flex justify-content-center">
-    <div class="card" style="width: 12rem;" *ngFor="let item of items" [routerLink]="getCategoryRoute(item.name)">
-      <img [src]="item.image" class="card-img-top" alt="{{item.name}}">
+    <div class="card" style="width: 12rem;" *ngFor="let category of categories" [routerLink]="['/categories', formatCategoryName(category.name)]">
+      <img [src]="category.image" class="card-img-top" alt="{{category.name}}">
       <div class="card-body">
-        <p class="card-text">{{item.name | titlecase}}</p>
+        <p class="card-text">{{category.name | titlecase}}</p>
       </div>
     </div>
   </div>

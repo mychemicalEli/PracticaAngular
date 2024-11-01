@@ -14,11 +14,6 @@ import { HttpClientModule, provideHttpClient, withFetch } from '@angular/common/
 import { CommonModule } from '@angular/common';
 import { registerLocaleData } from '@angular/common';
 import localeEs from '@angular/common/locales/es';
-import { BagsComponent } from './categories/bags/bags.component';
-import { DressesComponent } from './categories/dresses/dresses.component';
-import { ShoesComponent } from './categories/shoes/shoes.component';
-import { JeansComponent } from './categories/jeans/jeans.component';
-import { TShirtsComponent } from './categories/t-shirts/t-shirts.component';
 import { CarouselComponent } from './home/carousel/carousel.component';
 import { BannersComponent } from './home/banners/banners.component';
 import { CategoriesCardsComponent } from './home/categories-cards/categories-cards.component';
@@ -35,11 +30,6 @@ registerLocaleData(localeEs, 'es');
     NavbarComponent,
     FooterComponent,
     AboutComponent,
-    BagsComponent,
-    DressesComponent,
-    ShoesComponent,
-    JeansComponent,
-    TShirtsComponent,
     CarouselComponent,
     BannersComponent,
     CategoriesCardsComponent
